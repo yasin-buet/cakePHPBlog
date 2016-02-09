@@ -25,7 +25,6 @@ class PostsController extends AppController {
  */
 	public function index() {
 		$this->Post->recursive = 0;
-		debug($this->Auth->user());
 		$this->paginate = array('limit' => 3);
 		$this->set('posts', $this->Paginator->paginate());
 	}
@@ -52,7 +51,7 @@ class PostsController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
-			$this->request->data['Post']['user_id'] = 3;
+			$this->request->data['Post']['user_id'] = $this->Auth->user('id');
 			$this->Post->create();
 			if ($this->Post->save($this->request->data)) {
 				$this->Flash->success(__('The post has been saved.'));
