@@ -10,7 +10,7 @@
                 <div class="media-body">
                     <h4 class="media-heading"><?php echo $this->Html->link($post['Post']['title'], array('controller' => 'posts', 'action' => 'view', $post['Post']['id'])); ?></h4>
                     <p class="text-right">By
-                        <?php echo $this->Html->link($post['User']['name'], array('controller' => 'users', 'action' => 'view', $post['User']['id'])); ?></p>
+                        <?php echo $this->Html->link($post['User']['username'], array('controller' => 'users', 'action' => 'view', $post['User']['id'])); ?></p>
                     <p>
                         <?php echo h($post[ 'Post'][ 'body']); ?>
                     </p>
@@ -22,6 +22,11 @@
                         <li>|</li>
                         <li>
                             <?php echo $this->Html->link(__('New Comment'), array('controller' => 'comments', 'action' => 'add', $post['Post']['id'])); ?></li>
+                            <li>
+                            <?php if (AuthComponent::user('id') == $post['User']['id']): ?>
+                            <?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $post['Post']['id'])); ?>
+                            <?php endif; ?>
+                            </li>
                     </ul>
                 </div>
             </div>
