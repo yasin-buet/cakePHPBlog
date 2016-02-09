@@ -33,6 +33,7 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 	public $components = array(
         'Flash',
+        'Session',
         'Auth' => array(
             'loginRedirect' => array(
                 'controller' => 'posts',
@@ -45,6 +46,7 @@ class AppController extends Controller {
             ),
             'authenticate' => array(
                 'Form' => array(
+                    'userModel'=>'User',
                     'passwordHasher' => 'Blowfish'
                 )
             )
