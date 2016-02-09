@@ -13,11 +13,9 @@
 		</dd>
 		<dt><?php echo __('User'); ?></dt>
 		<dd>
-<<<<<<< HEAD
-			<?php echo $this->Html->link($post['User']['name'], array('controller' => 'users', 'action' => 'view', $post['User']['id'])); ?>
-=======
 			<?php echo $this->Html->link($post['User']['username'], array('controller' => 'users', 'action' => 'view', $post['User']['id'])); ?>
->>>>>>> c93fa3e... fsdf
+
+
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Audio File'); ?></dt>
