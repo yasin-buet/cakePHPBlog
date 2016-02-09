@@ -15,7 +15,23 @@ class UsersController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator', 'Flash', 'Session');
+	// public $components = array('Paginator', 'Flash', 'Session');
+	public $components = array(
+		'Paginator',
+		'Flash',
+		'Session',
+	    'Auth' => array(
+	        'authenticate' => array(
+	            'Form' => array(
+	                'fields' => array(
+	                    'username' => 'username',
+	                    'password' => 'password'
+	                ),
+	            )
+	        )
+	    )
+    );
+	public $helpers = array('Session');
 
 /**
  * index method
@@ -50,6 +66,8 @@ class UsersController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->User->create();
+			$this->request->data['User']['password'] = AuthComponent::password($this->request->data['User']['password']);
+
 			if ($this->User->save($this->request->data)) {
 				$this->Flash->success(__('The user has been saved.'));
 				return $this->redirect(array('action' => 'index'));
@@ -109,8 +127,8 @@ class UsersController extends AppController {
       $this->Auth->authenticate = array(          
                     'Form' => array(
                         'fields' => array(
-                            'username' => 'y',
-                            'password' => '123456'
+                            'username' => 'username',
+                            'password' => 'password'
                                 )
                             )
                         );
@@ -120,9 +138,15 @@ class UsersController extends AppController {
 
 	public function login() {
 	    if ($this->request->is('post')) {
-	        if ($this->Auth->login($this->request->data)) {
+	    	
+	    	debug(env('PHP_AUTH_USER'));
+
+	    	debug($this->Auth->identify($this->request, $this->response));
+	        if ($this->Auth->login()) {
 	            return $this->redirect($this->Auth->redirectUrl());
 	        }
+	        // echo $this->Session->flash('auth');
+	        // debug($this->Session->flash());
 	        $this->Flash->error(__('Invalid username or password, try again'));
 	    }
 	}
