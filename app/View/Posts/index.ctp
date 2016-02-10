@@ -1,6 +1,8 @@
 <div class="posts index">
     <h2><?php echo __('Posts'); ?></h2>
     <div class="container">
+    <?php echo $this->Html->link('Feed', array('action'=>'index', 
+'ext'=>'rss')); ?>
         <?php foreach ($posts as $post): ?>
         <div class="well">
             <div class="media">
