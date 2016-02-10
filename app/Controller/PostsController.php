@@ -62,6 +62,20 @@ class PostsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->request->data['Post']['user_id'] = $this->Auth->user('id');
+			
+
+			if(!empty($this->data['Post']['audio_file']['name']))
+            {
+                $file = $this->data['Post']['audio_file'];
+                $ary_ext = array('jpg','jpeg','gif','png', 'mp3'); 
+                $ext = substr(strtolower(strrchr($file['name'], '.')), 1); 
+                if(in_array($ext, $ary_ext))
+                {
+                    move_uploaded_file($file['tmp_name'], WWW_ROOT . 'audio/'.$this->request->data['Post']['title']);
+                    $this->request->data['Post']['audio_file'] = time().$file['name'];
+                }
+            }
+
 			$url = $this->request->data['Post']['video_file'];
 			preg_match(
 				'/\/\/(www\.)?vimeo.com\/(\d+)($|\/)/',
@@ -69,6 +83,7 @@ class PostsController extends AppController {
 				$matches
 			);		
 			$this->request->data['Post']['video_file'] = "http://player.vimeo.com/video/".$matches[2];
+			$this->request->data['Post']['audio_file'] = $this->request->data['Post']['title'];
 			$this->Post->create();
 			if ($this->Post->save($this->request->data)) {
 				$this->Flash->success(__('The post has been saved.'));
