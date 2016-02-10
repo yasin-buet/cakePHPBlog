@@ -4,9 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c03480cd6606d286d65f99d2ef7d5219",
-    "content-hash": "00dda2fe0c5e83b197c7362983e8298c",
-    "packages": [],
+    "hash": "d6ecc3a3eca398a40a9da428a4327a0f",
+    "content-hash": "819e78b967a70e0d3b6ec19bf65dd2a9",
+    "packages": [
+        {
+            "name": "drmonkeyninja/cakephp-video-helper",
+            "version": "2.0.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drmonkeyninja/cakephp-video-helper.git",
+                "reference": "349e6e7688ebfab600f6374646bd24cb90c2f89e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drmonkeyninja/cakephp-video-helper/zipball/349e6e7688ebfab600f6374646bd24cb90c2f89e",
+                "reference": "349e6e7688ebfab600f6374646bd24cb90c2f89e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "VideoEmbed"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andy Carter",
+                    "role": "Author"
+                },
+                {
+                    "name": "Emerson Soares",
+                    "role": "Author"
+                }
+            ],
+            "description": "CakePHP helper for embedding YouTube and Vimeo videos",
+            "homepage": "https://github.com/drmonkeyninja/cakephp-video-helper",
+            "keywords": [
+                "cakephp",
+                "dailymotion",
+                "video",
+                "vimeo",
+                "wistia",
+                "youtube"
+            ],
+            "time": "2014-11-11 19:30:02"
+        }
+    ],
     "packages-dev": [
         {
             "name": "cakephp/cakephp-codesniffer",
