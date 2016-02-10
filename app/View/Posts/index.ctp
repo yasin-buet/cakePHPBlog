@@ -15,6 +15,12 @@
                     <p>
                         <?php echo h($post[ 'Post'][ 'body']); ?>
                     </p>
+                    <p>
+                        <audio controls>
+                            <source src="<?php echo $this->webroot; ?>audio/<?php echo $post['Post']['title']?>" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </p>
                     <p> 
                         <iframe src="<?php echo $post['Post']['video_file'] ?>" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </p>            
@@ -42,8 +48,8 @@
     </p>
     <div class="paging">
         <?php echo $this->Paginator->prev('< ' . __('previous '), array(), null, array('class ' => 'prev disabled '));
-		echo $this->Paginator->numbers(array('separator ' => ' '));
-		echo $this->Paginator->next(__('next ') . '>', array(), null, array('class' => 'next disabled')); ?>
+        echo $this->Paginator->numbers(array('separator ' => ' '));
+        echo $this->Paginator->next(__('next ') . '>', array(), null, array('class' => 'next disabled')); ?>
     </div>
 </div>
 <div class="actions">
