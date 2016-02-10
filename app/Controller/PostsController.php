@@ -15,7 +15,7 @@ class PostsController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator', 'Flash', 'Session');
+	public $components = array('Paginator', 'Flash', 'Session', 'RequestHandler');
 	
 
 /**
@@ -24,9 +24,15 @@ class PostsController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->Post->recursive = 0;
-		$this->paginate = array('limit' => 3);
-		$this->set('posts', $this->Paginator->paginate());
+		$options = array();
+  		if ($this->RequestHandler->isRss()) {
+    		$options = array_merge($options, array(
+       			'order' => array('Post.created' => 'desc'),
+       			'limit' => 5)
+    		);
+  		}
+	  $posts = $this->Post->find('all', $options);
+	  $this->set(compact('posts'));
 	}
 
 /**
