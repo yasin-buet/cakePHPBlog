@@ -6,8 +6,7 @@
 		echo $this->Form->input('title');
 		echo $this->Form->input('body');
 		echo $this->Form->input('audio_file');
-		echo $this->Form->input('video_file');
-	?>
+		echo $this->Form->input('video_file');?>	
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>

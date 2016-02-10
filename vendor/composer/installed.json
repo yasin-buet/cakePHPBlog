@@ -694,5 +694,54 @@
             "debug",
             "kit"
         ]
+    },
+    {
+        "name": "drmonkeyninja/cakephp-video-helper",
+        "version": "2.0.6.2",
+        "version_normalized": "2.0.6.2",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/drmonkeyninja/cakephp-video-helper.git",
+            "reference": "349e6e7688ebfab600f6374646bd24cb90c2f89e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/drmonkeyninja/cakephp-video-helper/zipball/349e6e7688ebfab600f6374646bd24cb90c2f89e",
+            "reference": "349e6e7688ebfab600f6374646bd24cb90c2f89e",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2014-11-11 19:30:02",
+        "type": "cakephp-plugin",
+        "extra": {
+            "installer-name": "VideoEmbed"
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Andy Carter",
+                "role": "Author"
+            },
+            {
+                "name": "Emerson Soares",
+                "role": "Author"
+            }
+        ],
+        "description": "CakePHP helper for embedding YouTube and Vimeo videos",
+        "homepage": "https://github.com/drmonkeyninja/cakephp-video-helper",
+        "keywords": [
+            "cakephp",
+            "dailymotion",
+            "video",
+            "vimeo",
+            "wistia",
+            "youtube"
+        ]
     }
 ]
