@@ -14,8 +14,6 @@
 		<dt><?php echo __('User'); ?></dt>
 		<dd>
 			<?php echo $this->Html->link($post['User']['username'], array('controller' => 'users', 'action' => 'view', $post['User']['id'])); ?>
-
-
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Audio File'); ?></dt>

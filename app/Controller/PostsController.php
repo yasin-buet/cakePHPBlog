@@ -31,8 +31,12 @@ class PostsController extends AppController {
        			'limit' => 5)
     		);
   		}
-	  $posts = $this->Post->find('all', $options);
-	  $this->set(compact('posts'));
+		$posts = $this->Post->find('all', $options);
+		$this->set(compact('posts'));
+
+	  	$this->Post->recursive = 0;
+		$this->paginate = array('limit' => 3);
+		$this->set('posts', $this->Paginator->paginate());
 	}
 
 /**
@@ -58,6 +62,13 @@ class PostsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->request->data['Post']['user_id'] = $this->Auth->user('id');
+			$url = $this->request->data['Post']['video_file'];
+			preg_match(
+				'/\/\/(www\.)?vimeo.com\/(\d+)($|\/)/',
+				$url,
+				$matches
+			);		
+			$this->request->data['Post']['video_file'] = "http://player.vimeo.com/video/".$matches[2];
 			$this->Post->create();
 			if ($this->Post->save($this->request->data)) {
 				$this->Flash->success(__('The post has been saved.'));
