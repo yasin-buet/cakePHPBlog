@@ -66,7 +66,8 @@ class Comment extends AppModel {
 			'foreignKey' => 'post_id',
 			'conditions' => '',
 			'fields' => '',
-			'order' => ''
+			'order' => '',
+			'counterCache' => true
 		)
 	);
 }

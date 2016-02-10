@@ -49,7 +49,6 @@ class CommentsController extends AppController {
  */
 	public function add($id = null) {
 		if ($this->request->is('post')) {
-			debug($this->Auth->user());
 			$this->request->data['Comment']['user_id'] = $this->Auth->user('id');
 			$this->request->data['Comment']['post_id'] = $id;
 			$this->Comment->create();

@@ -25,70 +25,16 @@ class PostsController extends AppController {
  */
 	public function index() {
 		$options = array();
-		// $post['Post']['id'] = 1;
-		// $total = $this->Post->Comment->find('count');
-		// debug($total);
-
-		
-
-		$posts = $this->Post->find('all', array(
-   		 	// 'fields' => array(
-        		// 'Post.id', 
-       	 		// 'COUNT(Comment.id)'
-    		// ),
-    		'group' => array('Post.id'),
-    		'joins' => array(
-        		array(
-	            	'table' => 'comments',
-	            	'alias' => 'Comment',
-	            	'conditions' => array(
-	            		'Post.id = Comment.post_id'
-		            )
-		        )
-		    ),
-		    'order' => array('COUNT(Comment.id)' => 'desc')
-		));
-		debug($posts);
-
-
-
-
-
-		// debug($result);
-		// $options = array('order' => array('Post.title' => 'asc'));
-
+		$this->Post->recursive = 1;
   		if ($this->RequestHandler->isRss()) {
     		$options = array_merge($options, array(
        			'order' => array('Post.created' => 'desc'),
        			'limit' => 5)
     		);
+    		$this->set(compact('posts'));
   		}
 
-  	$params = array();
-	$params = array(
-		    // 'conditions' => array('Model.field' => $thisValue), //array of conditions
-		    // 'recursive' => 1, //int
-		    //array of field names
-		    // 'fields' => array('Model.field1', 'DISTINCT Model.field2'),
-		    //string or array defining order
-		    'order' => array('Post.body DESC'),
-		    // 'group' => array('Model.field'), //fields to GROUP BY
-		    // 'limit' => n, //int
-		    // 'page' => n, //int
-		    // 'offset' => n, //int
-		    // 'callbacks' => true //other possible values are false, 'before', 'after'
-		);
-
-  		// $options = array_merge($options, $result);
-		// $posts = $this->Post->find('all', $options);
-		// $posts = $this->Post->find('all', $params);
-	// $posts = $this->Post->find('all');
-	// debug($posts);
-
-		$this->set(compact('posts'));
-
-	  	$this->Post->recursive = 0;
-		$this->paginate = array('limit' => 3);
+		$this->paginate = array('limit' => 3, 'order' => array('Post.comment_count' => 'desc'));
 		$this->set('posts', $this->Paginator->paginate());
 	}
 
