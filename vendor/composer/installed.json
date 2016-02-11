@@ -743,5 +743,138 @@
             "wistia",
             "youtube"
         ]
+    },
+    {
+        "name": "hybridauth/hybridauth",
+        "version": "v2.4.1",
+        "version_normalized": "2.4.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/hybridauth/hybridauth.git",
+            "reference": "89e4dc3da3a55cf3ffb00a428c247ff2166dc7ca"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/hybridauth/hybridauth/zipball/89e4dc3da3a55cf3ffb00a428c247ff2166dc7ca",
+            "reference": "89e4dc3da3a55cf3ffb00a428c247ff2166dc7ca",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.2.0"
+        },
+        "time": "2015-04-12 01:39:53",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Hybrid": "hybridauth/"
+            },
+            "classmap": [
+                "hybridauth/Hybrid"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "(MIT or GPL-3.0+)"
+        ],
+        "authors": [
+            {
+                "name": "Miled",
+                "email": "hybridauth@gmail.com"
+            }
+        ],
+        "description": "Open source social sign on PHP library.",
+        "homepage": "http://hybridauth.sourceforge.net",
+        "keywords": [
+            "OpenId",
+            "facebook",
+            "google",
+            "hybridauth",
+            "login",
+            "oauth",
+            "social",
+            "twitter",
+            "yahoo"
+        ]
+    },
+    {
+        "name": "admad/cakephp-hybridauth",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ADmad/CakePHP-HybridAuth.git",
+            "reference": "194976c8dded6ee808e87797391d927327a06d53"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ADmad/CakePHP-HybridAuth/zipball/194976c8dded6ee808e87797391d927327a06d53",
+            "reference": "194976c8dded6ee808e87797391d927327a06d53",
+            "shasum": ""
+        },
+        "require": {
+            "composer/installers": "*",
+            "hybridauth/hybridauth": "2.4.*"
+        },
+        "time": "2015-04-10 15:17:42",
+        "type": "cakephp-plugin",
+        "extra": {
+            "installer-name": "HybridAuth"
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "A CakePHP plugin for using the HybridAuth social sign on library",
+        "homepage": "http://github.com/ADmad/CakePHP-HybridAuth",
+        "keywords": [
+            "cakephp",
+            "hybridauth",
+            "multi provider",
+            "social signon"
+        ]
+    },
+    {
+        "name": "drmonkeyninja/cakephp-social-share",
+        "version": "2.0.4.0",
+        "version_normalized": "2.0.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/drmonkeyninja/cakephp-social-share.git",
+            "reference": "b73bd57c96600a51f285ecae2e7bba41f999eb2d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/drmonkeyninja/cakephp-social-share/zipball/b73bd57c96600a51f285ecae2e7bba41f999eb2d",
+            "reference": "b73bd57c96600a51f285ecae2e7bba41f999eb2d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2015-05-08 18:33:32",
+        "type": "cakephp-plugin",
+        "extra": {
+            "installer-name": "SocialShare"
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Andy Carter",
+                "role": "Author"
+            }
+        ],
+        "description": "CakePHP helper for creating social share/bookmark links",
+        "homepage": "https://github.com/drmonkeyninja/cakephp-social-share",
+        "keywords": [
+            "cakephp",
+            "helper"
+        ]
     }
 ]

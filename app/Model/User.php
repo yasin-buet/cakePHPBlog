@@ -37,6 +37,9 @@ class User extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
+		'SocialProfile' => array(
+        	'className' => 'SocialProfile',
+    	),
 		'Post' => array(
 			'className' => 'Post',
 			'foreignKey' => 'user_id',

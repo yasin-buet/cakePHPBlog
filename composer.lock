@@ -4,145 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d6ecc3a3eca398a40a9da428a4327a0f",
-    "content-hash": "819e78b967a70e0d3b6ec19bf65dd2a9",
+    "hash": "69fd88ce37d6d4d5d8bdbe0e4fd7e66e",
+    "content-hash": "ce6a47892c610c2bb36c800de71ea569",
     "packages": [
         {
-            "name": "drmonkeyninja/cakephp-video-helper",
-            "version": "2.0.6.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drmonkeyninja/cakephp-video-helper.git",
-                "reference": "349e6e7688ebfab600f6374646bd24cb90c2f89e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drmonkeyninja/cakephp-video-helper/zipball/349e6e7688ebfab600f6374646bd24cb90c2f89e",
-                "reference": "349e6e7688ebfab600f6374646bd24cb90c2f89e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "cakephp-plugin",
-            "extra": {
-                "installer-name": "VideoEmbed"
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andy Carter",
-                    "role": "Author"
-                },
-                {
-                    "name": "Emerson Soares",
-                    "role": "Author"
-                }
-            ],
-            "description": "CakePHP helper for embedding YouTube and Vimeo videos",
-            "homepage": "https://github.com/drmonkeyninja/cakephp-video-helper",
-            "keywords": [
-                "cakephp",
-                "dailymotion",
-                "video",
-                "vimeo",
-                "wistia",
-                "youtube"
-            ],
-            "time": "2014-11-11 19:30:02"
-        }
-    ],
-    "packages-dev": [
-        {
-            "name": "cakephp/cakephp-codesniffer",
+            "name": "admad/cakephp-hybridauth",
             "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/cakephp/cakephp-codesniffer.git",
-                "reference": "e137baba93d812413a246060f3fb0c0ebeb470a7"
+                "url": "https://github.com/ADmad/CakePHP-HybridAuth.git",
+                "reference": "194976c8dded6ee808e87797391d927327a06d53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp-codesniffer/zipball/e137baba93d812413a246060f3fb0c0ebeb470a7",
-                "reference": "e137baba93d812413a246060f3fb0c0ebeb470a7",
-                "shasum": ""
-            },
-            "require": {
-                "squizlabs/php_codesniffer": "~1.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.1.*"
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "CakePHP Community",
-                    "homepage": "https://github.com/cakephp/cakephp-codesniffer/graphs/contributors"
-                }
-            ],
-            "description": "CakePHP CodeSniffer Standards",
-            "homepage": "http://cakephp.org",
-            "keywords": [
-                "codesniffer",
-                "framework"
-            ],
-            "time": "2014-12-22 02:40:50"
-        },
-        {
-            "name": "cakephp/debug_kit",
-            "version": "2.2.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cakephp/debug_kit.git",
-                "reference": "6c318a779b63bd567fd17811aecc7654a74bbec5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/6c318a779b63bd567fd17811aecc7654a74bbec5",
-                "reference": "6c318a779b63bd567fd17811aecc7654a74bbec5",
+                "url": "https://api.github.com/repos/ADmad/CakePHP-HybridAuth/zipball/194976c8dded6ee808e87797391d927327a06d53",
+                "reference": "194976c8dded6ee808e87797391d927327a06d53",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "*",
-                "php": ">=5.3.0"
+                "hybridauth/hybridauth": "2.4.*"
             },
             "type": "cakephp-plugin",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2.x-dev"
-                },
-                "installer-name": "DebugKit"
+                "installer-name": "HybridAuth"
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Mark Story",
-                    "homepage": "http://mark-story.com",
-                    "role": "Author"
-                },
-                {
-                    "name": "CakePHP Community",
-                    "homepage": "https://github.com/cakephp/debug_kit/graphs/contributors"
-                }
-            ],
-            "description": "CakePHP Debug Kit",
-            "homepage": "https://github.com/cakephp/debug_kit",
+            "description": "A CakePHP plugin for using the HybridAuth social sign on library",
+            "homepage": "http://github.com/ADmad/CakePHP-HybridAuth",
             "keywords": [
                 "cakephp",
-                "debug",
-                "kit"
+                "hybridauth",
+                "multi provider",
+                "social signon"
             ],
-            "time": "2015-09-13 20:07:55"
+            "time": "2015-04-10 15:17:42"
         },
         {
             "name": "composer/installers",
@@ -241,6 +140,234 @@
                 "zikula"
             ],
             "time": "2016-01-27 12:54:22"
+        },
+        {
+            "name": "drmonkeyninja/cakephp-social-share",
+            "version": "2.0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drmonkeyninja/cakephp-social-share.git",
+                "reference": "b73bd57c96600a51f285ecae2e7bba41f999eb2d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drmonkeyninja/cakephp-social-share/zipball/b73bd57c96600a51f285ecae2e7bba41f999eb2d",
+                "reference": "b73bd57c96600a51f285ecae2e7bba41f999eb2d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "SocialShare"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andy Carter",
+                    "role": "Author"
+                }
+            ],
+            "description": "CakePHP helper for creating social share/bookmark links",
+            "homepage": "https://github.com/drmonkeyninja/cakephp-social-share",
+            "keywords": [
+                "cakephp",
+                "helper"
+            ],
+            "time": "2015-05-08 18:33:32"
+        },
+        {
+            "name": "drmonkeyninja/cakephp-video-helper",
+            "version": "2.0.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drmonkeyninja/cakephp-video-helper.git",
+                "reference": "349e6e7688ebfab600f6374646bd24cb90c2f89e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drmonkeyninja/cakephp-video-helper/zipball/349e6e7688ebfab600f6374646bd24cb90c2f89e",
+                "reference": "349e6e7688ebfab600f6374646bd24cb90c2f89e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "VideoEmbed"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andy Carter",
+                    "role": "Author"
+                },
+                {
+                    "name": "Emerson Soares",
+                    "role": "Author"
+                }
+            ],
+            "description": "CakePHP helper for embedding YouTube and Vimeo videos",
+            "homepage": "https://github.com/drmonkeyninja/cakephp-video-helper",
+            "keywords": [
+                "cakephp",
+                "dailymotion",
+                "video",
+                "vimeo",
+                "wistia",
+                "youtube"
+            ],
+            "time": "2014-11-11 19:30:02"
+        },
+        {
+            "name": "hybridauth/hybridauth",
+            "version": "v2.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hybridauth/hybridauth.git",
+                "reference": "89e4dc3da3a55cf3ffb00a428c247ff2166dc7ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hybridauth/hybridauth/zipball/89e4dc3da3a55cf3ffb00a428c247ff2166dc7ca",
+                "reference": "89e4dc3da3a55cf3ffb00a428c247ff2166dc7ca",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Hybrid": "hybridauth/"
+                },
+                "classmap": [
+                    "hybridauth/Hybrid"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "(MIT or GPL-3.0+)"
+            ],
+            "authors": [
+                {
+                    "name": "Miled",
+                    "email": "hybridauth@gmail.com"
+                }
+            ],
+            "description": "Open source social sign on PHP library.",
+            "homepage": "http://hybridauth.sourceforge.net",
+            "keywords": [
+                "OpenId",
+                "facebook",
+                "google",
+                "hybridauth",
+                "login",
+                "oauth",
+                "social",
+                "twitter",
+                "yahoo"
+            ],
+            "time": "2015-04-12 01:39:53"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "cakephp/cakephp-codesniffer",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/cakephp-codesniffer.git",
+                "reference": "e137baba93d812413a246060f3fb0c0ebeb470a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/cakephp-codesniffer/zipball/e137baba93d812413a246060f3fb0c0ebeb470a7",
+                "reference": "e137baba93d812413a246060f3fb0c0ebeb470a7",
+                "shasum": ""
+            },
+            "require": {
+                "squizlabs/php_codesniffer": "~1.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/cakephp-codesniffer/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP CodeSniffer Standards",
+            "homepage": "http://cakephp.org",
+            "keywords": [
+                "codesniffer",
+                "framework"
+            ],
+            "time": "2014-12-22 02:40:50"
+        },
+        {
+            "name": "cakephp/debug_kit",
+            "version": "2.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/debug_kit.git",
+                "reference": "6c318a779b63bd567fd17811aecc7654a74bbec5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/6c318a779b63bd567fd17811aecc7654a74bbec5",
+                "reference": "6c318a779b63bd567fd17811aecc7654a74bbec5",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                },
+                "installer-name": "DebugKit"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Story",
+                    "homepage": "http://mark-story.com",
+                    "role": "Author"
+                },
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/debug_kit/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP Debug Kit",
+            "homepage": "https://github.com/cakephp/debug_kit",
+            "keywords": [
+                "cakephp",
+                "debug",
+                "kit"
+            ],
+            "time": "2015-09-13 20:07:55"
         },
         {
             "name": "phpunit/php-code-coverage",
