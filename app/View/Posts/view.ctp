@@ -36,7 +36,12 @@
 			<?php echo h($post['Post']['modified']); ?>
 			&nbsp;
 		</dd>
+		
 	</dl>
+	<h2><?php echo $this->SocialShare->link(
+                                'twitter',
+                                    __('Share on twitter')
+                            ); ?></h2>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
@@ -56,6 +61,7 @@
 		<th><?php echo __('Body'); ?></th>
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
+		
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($post['Comment'] as $comment): ?>

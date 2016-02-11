@@ -31,6 +31,9 @@
  * ...and connect the rest of 'Pages' controller's URLs.
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+	Router::connect('/social_login/*', array( 'controller' => 'users', 'action' => 'social_login'));
+	Router::connect('/social_endpoint/*', array( 'controller' => 'users', 'action' => 'social_endpoint'));
+
 
 	Router::parseExtensions('rss');
 

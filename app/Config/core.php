@@ -383,3 +383,9 @@ Cache::config('_cake_model_', array(
 	'serialize' => ($engine === 'File'),
 	'duration' => $duration
 ));
+Configure::write('Hybridauth', array(
+    // openid providers
+    "Facebook" => array(
+        "enabled" => true,
+        "keys" => array("id" => "971460122889609", "secret" => "187a5733ba27326b507f272009597d1a")
+    )));

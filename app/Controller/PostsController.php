@@ -16,6 +16,7 @@ class PostsController extends AppController {
  * @var array
  */
 	public $components = array('Paginator', 'Flash', 'Session', 'RequestHandler');
+	public $helpers = array('SocialShare.SocialShare');
 	
 
 /**

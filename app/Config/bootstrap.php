@@ -25,6 +25,11 @@
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
 CakePlugin::load('VideoEmbed');
+spl_autoload_unregister(array('App', 'load'));
+spl_autoload_register(array('App', 'load'), true, true);
+// require APP . 'Vendor/autoload.php';
+CakePlugin::load('HybridAuth', array('bootstrap' => true));
+CakePlugin::load('SocialShare');
 
 
 /**
@@ -111,3 +116,20 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+if (file_exists(APP . 'Config' . DS . 'hybridauth.php')) {
+	Configure::load('hybridauth');
+} else {
+	$config = array(
+		'providers' => array(
+			'OpenID' => array(
+				'enabled' => true
+			)
+		),
+		'debug_mode' => (bool)Configure::read('debug'),
+		'debug_file' => LOGS . 'hybridauth.log',
+	);
+
+	Configure::write('HybridAuth', $config);
+}
+
