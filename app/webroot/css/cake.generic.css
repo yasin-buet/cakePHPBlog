@@ -30,7 +30,7 @@ body {
 }
 a {
 	color: #003d4c;
-	text-decoration: underline;
+	text-decoration: none;
 	font-weight: bold;
 }
 a:hover {

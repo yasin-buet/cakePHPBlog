@@ -39,7 +39,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-			Blog Website
+			<?php if (AuthComponent::user('id')): ?>
+				<?php echo $this->element('navbar'); ?>
+			<?php endif; ?>
+			<?php if (!AuthComponent::user('id')): ?>
+				<?php echo $this->element('navbarNotLoggedIn'); ?>
+			<?php endif; ?>
 		</div>
 		<div id="content">
 

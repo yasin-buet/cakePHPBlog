@@ -1,7 +1,6 @@
 <div class="posts index">
     <h2><?php echo __('Posts'); ?></h2>
     <div class="container">
-    <?php echo $this->Html->link('Feed', array('action'=>'index', 'ext'=>'rss')); ?>
         <?php foreach ($posts as $post): ?>
         <div class="well">
             <div class="media">
@@ -53,9 +52,12 @@
     </div>
 </div>
 <div class="actions">
-    <h3><?php echo __('Actions'); ?></h3>
     <ul>
         <li>
-            <?php echo $this->Html->link(__('New Post'), array('action' => 'add')); ?></li>
+            <?php echo $this->Html->link(__('New Post'), array('action' => 'add')); ?>
+        </li>
+        <li>
+            <?php echo $this->Html->link('Feed', array('action'=>'index', 'ext'=>'rss')); ?>
+        </li>
     </ul>
 </div>
