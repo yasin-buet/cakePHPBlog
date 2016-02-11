@@ -21,6 +21,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
+	<?php echo $this->Html->css('bootstrap.css');?>
 	<title>
 		<?php echo $cakeDescription ?>:
 		<?php echo $this->fetch('title'); ?>
@@ -38,7 +39,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			<?php if (AuthComponent::user('id')): ?>
+				<?php echo $this->element('navbar'); ?>
+			<?php endif; ?>
+			<?php if (!AuthComponent::user('id')): ?>
+				<?php echo $this->element('navbarNotLoggedIn'); ?>
+			<?php endif; ?>
 		</div>
 		<div id="content">
 
@@ -47,15 +53,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
-				);
-			?>
-			<p>
-				<?php echo $cakeVersion; ?>
-			</p>
+			PHP ambidextrous
 		</div>
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
