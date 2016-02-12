@@ -133,7 +133,7 @@ class UsersController extends AppController {
                             )
                         );
     // Allow users to register and logout.
-    $this->Auth->allow('login', 'add', 'logout', 'social_login','social_endpoint');
+    $this->Auth->allow('login', 'add', 'logout');
 }
 
 	public function login() {
@@ -148,15 +148,6 @@ class UsersController extends AppController {
 	        // echo $this->Session->flash('auth');
 	        // debug($this->Session->flash());
 	        $this->Flash->error(__('Invalid username or password, try again'));
-	    }
-	}
-	public function social_login($provider) {
-	    if ($this->Hybridauth->connect($provider)){
-	        $this->_successfulHybridauth($provider,$this->Hybridauth->user_profile);
-	    } else {
-	        // error
-	        $this->Session->setFlash($this->Hybridauth->error);
-	        $this->redirect($this->Auth->loginAction);
 	    }
 	}
 
