@@ -27,7 +27,7 @@
                         <li><span></i> <?php echo h($post['Post']['created']); ?> </span>
                         </li>
                         <li>|</li>
-                        <span></i> 2 comments</span>
+                        <span><?php echo $post['Post']['comment_count']; ?></i> </span>
                         <li>|</li>
                         <li>
                             <?php echo $this->Html->link(__('New Comment'), array('controller' => 'comments', 'action' => 'add', $post['Post']['id'])); ?></li>
