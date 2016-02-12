@@ -56,6 +56,5 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			PHP ambidextrous
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
 </body>
 </html>
