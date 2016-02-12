@@ -69,10 +69,10 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Postgres',
 		'persistent' => false,
-		'host' => 'ec2-54-83-17-9.compute-1.amazonaws.com',
-		'login' => 'heffyrktflefvr',
-		'password' => 'ynb2a79nNvixQUoUbZ1YgWWdYd',
-		'database' => 'd2lv62fkdbj1cr',
+		'host' => 'ec2-54-225-223-40.compute-1.amazonaws.com',
+		'login' => 'bjqictatqubwdo',
+		'password' => 'KEiDb2Sf0pRTf_FuHst2rh2X-1',
+		'database' => 'dbdhnflisb23ec',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
