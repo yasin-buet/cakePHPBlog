@@ -123,6 +123,8 @@ return array(
     'OAuthSignatureMethod_RSA_SHA1' => $vendorDir . '/hybridauth/hybridauth/hybridauth/Hybrid/thirdparty/OAuth/OAuth.php',
     'OAuthToken' => $vendorDir . '/hybridauth/hybridauth/hybridauth/Hybrid/thirdparty/OAuth/OAuth.php',
     'OAuthUtil' => $vendorDir . '/hybridauth/hybridauth/hybridauth/Hybrid/thirdparty/OAuth/OAuth.php',
+    'Opauth' => $vendorDir . '/opauth/opauth/lib/Opauth/Opauth.php',
+    'OpauthStrategy' => $vendorDir . '/opauth/opauth/lib/Opauth/OpauthStrategy.php',
     'PEAR_Sniffs_Classes_ClassDeclarationSniff' => $vendorDir . '/squizlabs/php_codesniffer/CodeSniffer/Standards/PEAR/Sniffs/Classes/ClassDeclarationSniff.php',
     'PEAR_Sniffs_Commenting_ClassCommentSniff' => $vendorDir . '/squizlabs/php_codesniffer/CodeSniffer/Standards/PEAR/Sniffs/Commenting/ClassCommentSniff.php',
     'PEAR_Sniffs_Commenting_FileCommentSniff' => $vendorDir . '/squizlabs/php_codesniffer/CodeSniffer/Standards/PEAR/Sniffs/Commenting/FileCommentSniff.php',

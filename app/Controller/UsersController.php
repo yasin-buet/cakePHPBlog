@@ -154,4 +154,12 @@ class UsersController extends AppController {
 	public function logout() {
     	return $this->redirect($this->Auth->logout());
 	}
+	public function opauth_complete() {
+		// debug($this->Auth->identify($this->request, $this->response));
+		// return $this->redirect($this->Auth->redirectUrl());
+	   debug($this->data['auth']['provider']);
+	   debug($this->data['auth']['info']['name']);
+	   debug($this->data['timestamp']);
+       debug($this->data);
+   }
 }

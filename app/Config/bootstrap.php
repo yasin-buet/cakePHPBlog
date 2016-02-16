@@ -28,8 +28,10 @@ CakePlugin::load('VideoEmbed');
 spl_autoload_unregister(array('App', 'load'));
 spl_autoload_register(array('App', 'load'), true, true);
 // require APP . 'Vendor/autoload.php';
-CakePlugin::load('HybridAuth', array('bootstrap' => true));
+// CakePlugin::load('HybridAuth', array('bootstrap' => true));
 CakePlugin::load('SocialShare');
+CakePlugin::load('Opauth', array('routes' => true, 'bootstrap' => true));
+
 
 
 /**
@@ -116,20 +118,27 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+Configure::write('Opauth.path', '/cakePHPBlog/auth/');
 
-if (file_exists(APP . 'Config' . DS . 'hybridauth.php')) {
-	Configure::load('hybridauth');
-} else {
-	$config = array(
-		'providers' => array(
-			'OpenID' => array(
-				'enabled' => true
-			)
-		),
-		'debug_mode' => (bool)Configure::read('debug'),
-		'debug_file' => LOGS . 'hybridauth.log',
-	);
+Configure::write('Opauth.Strategy', array());
+Configure::write('Opauth.Strategy.Facebook', array(
+   'app_id' => '971460122889609',
+   'app_secret' => '187a5733ba27326b507f272009597d1a'
+));
 
-	Configure::write('HybridAuth', $config);
-}
+// if (file_exists(APP . 'Config' . DS . 'hybridauth.php')) {
+// 	Configure::load('hybridauth');
+// } else {
+// 	$config = array(
+// 		'providers' => array(
+// 			'OpenID' => array(
+// 				'enabled' => true
+// 			)
+// 		),
+// 		'debug_mode' => (bool)Configure::read('debug'),
+// 		'debug_file' => LOGS . 'hybridauth.log',
+// 	);
+
+// 	Configure::write('HybridAuth', $config);
+// }
 

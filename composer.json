@@ -22,7 +22,9 @@
 		"ext-mcrypt": "*",
 		"drmonkeyninja/cakephp-video-helper": "2.*",
 		"admad/cakephp-hybridauth": "~1.0",
-		"drmonkeyninja/cakephp-social-share": "~2.0"
+		"drmonkeyninja/cakephp-social-share": "~2.0",
+		"uzyn/cakephp-opauth": "*",
+		"opauth/facebook": "*"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "3.7.*",

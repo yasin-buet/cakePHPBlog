@@ -31,6 +31,10 @@
  * ...and connect the rest of 'Pages' controller's URLs.
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+	Router::connect(
+   '/opauth-complete/*', 
+   array('controller' => 'users', 'action' => 'opauth_complete')
+);
 	Router::connect('/social_login/*', array( 'controller' => 'users', 'action' => 'social_login'));
 	Router::connect('/social_endpoint/*', array( 'controller' => 'users', 'action' => 'social_endpoint'));
 
